@@ -1,10 +1,12 @@
 import React from 'react';
+import '../assets/styles/components/header.css'
+
 
 
 const Header = () => {
   return (
     <header>
-        Soy el Header
+        <img className='logo'></img>
     </header>
   );
 };
