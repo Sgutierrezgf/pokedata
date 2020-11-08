@@ -1,11 +1,12 @@
 import React from 'react';
+import '../assets/styles/components/body.css';
 
 
 const Body = () => {
   return (
-    <header>
-        Soy el Body
-    </header>
+    <div className="Navbar">
+    Pokemon API
+</div>
   );
 };
 

@@ -1,3 +1,8 @@
-.logo{
-    background-image: url('../../images/logo2.png');
+.pokesearch{
+    height: 20px;
+    align-self: center;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
 }
