@@ -49,7 +49,5 @@ p {
     
 }
 .pokecard:hover{
-    background-color: grey;
-    opacity: 1;
-    
+    background-color: rgba(250, 138, 34, 0.5)
 }

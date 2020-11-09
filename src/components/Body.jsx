@@ -61,6 +61,7 @@ const loadPokemon = async (data) => {
   return (
     <div className="Navbar">
     <input
+        className='search'
         type="text"
         placeholder="Search Pokemon"
         onChange={(e) => setPokeSearch(e.target.value)}

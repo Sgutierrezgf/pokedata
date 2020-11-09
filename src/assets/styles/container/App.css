@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 .grid-container {
   width: 70%;
   display: grid;
@@ -24,4 +25,7 @@
   background: #30a7d7;
   color: #fff;
   font-size: 1em;
+}
+.filter{
+  text-align-last: center;
 }

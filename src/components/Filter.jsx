@@ -20,7 +20,7 @@ const pokeOptions10 = ['Grass', 'Unknown'];
 
 const Filter = () => {
   return (
-    <div>
+    <div className='filter'>
       <Checkbox.Group options={ pokeOptions } onChange={ onChange } />
       <br />
       <br />
