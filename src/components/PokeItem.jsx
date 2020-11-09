@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import '../assets/styles/components/pokeitem.css';
 import typeColors from '../hooks/TypeColors';
-import { Card, Modal, Space } from 'antd';
+import {  Modal } from 'antd';
 import { Row, Col } from 'antd';
 
-const CountryItem = ({ pokemon }) => {
+
+const PokeItem = ({ pokemon }) => {
     const [visible, setVisible] = useState(false);
 
     return (
-        <Space className="site-card-border-less-wrapper">
-            <Card bordered={ false } style={ { width: 300 } } onClick={ () => setVisible(true) }>
+        <div className="site-card-border-less-wrapper">
+            <div bordered={ false }  onClick={ () => setVisible(true) } className="pokecard">
                 <div className="Card__img">
                     <img src={ pokemon.sprites.front_default } alt="" />
                 </div>
@@ -27,7 +28,7 @@ const CountryItem = ({ pokemon }) => {
                         })
                     }
                 </div>
-            </Card>
+            </div>
             <Modal
                 title={ pokemon.name }
                 centered
@@ -41,11 +42,11 @@ const CountryItem = ({ pokemon }) => {
                         <img src={ pokemon.sprites.front_default } alt="" />
                     </Col>
                     <Col span={ 12 }>
-                            <p className="title">Weight : { pokemon.id }</p>
-                            <p className="title">Ability : { pokemon.weight }</p>
-                            <p className="title">Weight : { pokemon.height }</p>
-                            <p className="title">Height : { pokemon.flavor_text_entries }</p>
-                            <p className="title">Ability : { pokemon.genre }</p>
+                            <p className="title">Id : { pokemon.id }</p>
+                            <p className="title">Weight : { pokemon.weight }</p>
+                            <p className="title">Height : { pokemon.height }</p>
+                            <p className="title">Ability : { pokemon.abilities[0].ability.name }</p>
+                            <p className="title">habitat : { pokemon.habitat }</p>
                             <p className="title">Weight : { pokemon.weight }</p>
                             <p className="title">Height : { pokemon.height }</p>
                             <p className="title">Ability : { pokemon.abilities[0].ability.name }</p>
@@ -56,8 +57,8 @@ const CountryItem = ({ pokemon }) => {
 
                 </Row>
             </Modal>
-        </Space>
+        </div>
     );
 };
 
-export default CountryItem;
+export default PokeItem;

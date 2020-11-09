@@ -13,7 +13,7 @@ p {
 
 .Card__types {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
 }
 
 .Card__type {
@@ -40,4 +40,16 @@ p {
 
 .Card__data .title {
     font-weight: 700;
+}
+
+.pokecard{
+    border: 1px solid black;
+    border-radius: 25px;
+    cursor: pointer
+    
+}
+.pokecard:hover{
+    background-color: grey;
+    opacity: 1;
+    
 }
