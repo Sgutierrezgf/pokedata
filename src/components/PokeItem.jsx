@@ -35,7 +35,7 @@ const PokeItem = ({ pokemon }) => {
                 visible={ visible }
                 onOk={ () => setVisible(false) }
                 onCancel={ () => setVisible(false) }
-                width={ 1000 }
+                width={ 500 }
             >
                 <Row>
                     <Col span={ 12 }>

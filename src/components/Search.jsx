@@ -1,27 +1,24 @@
-import React, { useState } from 'react'
+const [pokemon, setPokemon] = useState("pikachu");
+  const [pokemonData, setPokemonData] = useState([]);
+  const [pokemonType, setPokemonType] = useState("");
 
-function PokemonForm(){
-  const [ pokemonData, setPokemonData ] = useState('')
-
-  const handleSubmit = event => {
-    event.preventDefault()
-
-  }
-
-  return (
-    <form className="pokemon-form" onSubmit={handleSubmit}>
-      <input
-        className="pokemon-input"
-        type="text"
-        name="pokemon"
-        value={pokemonData}
-        placeholder="Busca tu pokemon"
-        //Actualizas el valor del input cunado el usuario teclea
-        onChange={e => setPokemonData(e.target.value)}
-        autoComplete="off"/>
-      <input type="submit" className="pokemon-btn" value=""/>
-    </form>
-  )
-}
-
-export default PokemonForm
+  const handleChange = (e) => {
+    setPokemon(e.target.value.toLowerCase());
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    getPokemon();
+  };
+  const getPokemon = async () => {
+    const toArray = [];
+    try {
+      const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+      const res = await axios.get(url);
+      toArray.push(res.data);
+      setPokemonType(res.data.types[0].type.name);
+      setPokemonData(toArray);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  console.log(pokemonData);
