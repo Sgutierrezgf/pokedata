@@ -72,13 +72,13 @@ const loadPokemon = async (data) => {
             <div className="grid-container">
               { filteredPokemon.map((pokemon, i) => {
                 return <PokeItem key={ i } pokemon={ pokemon } />
-              }) }
+              })  }
             </div>
             <div className="btn">
               <button onClick={ prev }>Prev</button>
               <button onClick={ next }>Next</button>
             </div>
-          </>
+          </> 
         ) }
       </div>
     </div>
