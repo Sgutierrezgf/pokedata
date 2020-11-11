@@ -45,9 +45,17 @@ p {
 .pokecard{
     border: 1px solid black;
     border-radius: 25px;
-    cursor: pointer
+    cursor: pointer;
+    background-color: #d1d1d1cc;
     
 }
 .pokecard:hover{
     background-color: rgba(250, 138, 34, 0.5)
+}
+.pokeimg{
+    width: 250px;
+    display: flex;
+}
+.sitecard{
+    display: flex;
 }

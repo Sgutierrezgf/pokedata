@@ -1,0 +1,31 @@
+.filter{
+    border: 1px solid black;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #d1d1d1cc;
+}
+.boton{
+    width:30px;
+    height:30px;
+    margin: 5px;
+    padding:10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-size:11px;
+    line-height:32px;
+    border: 1 solid black;
+  }
+  .boton:hover{
+    opacity: 0.50;
+    -moz-opacity: .50;
+    filter:alpha (opacity=50);
+  }
+  .color{
+      display: flex;
+      ;
+  }
+  .radio{
+    display: flex;
+    place-content: center;
+  }

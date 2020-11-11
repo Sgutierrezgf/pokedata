@@ -9,10 +9,10 @@ const PokeItem = ({ pokemon }) => {
     const [visible, setVisible] = useState(false);
 
     return (
-        <div className="site-card-border-less-wrapper">
+        <div className="site-card-border-less-wrapper sitecard">
             <div bordered={ false } onClick={ () => setVisible(true) } className="pokecard" >
                 <div className="Card__img">
-                    <img src={ pokemon.sprites.front_default } alt="" />
+                    <img className='pokeimg' src={ `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png` } alt="" />
                 </div>
                 <div className="Card__name">
                     { pokemon.name }
@@ -39,7 +39,7 @@ const PokeItem = ({ pokemon }) => {
             >
                 <Row>
                     <Col span={ 12 }>
-                        <img src={ pokemon.sprites.front_default } alt="" />
+                        <img className='pokeimg' src={ `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png` } alt="" />
                     </Col>
                     <Col span={ 12 }>
                         <ul className="pokemon-stats">
@@ -50,10 +50,13 @@ const PokeItem = ({ pokemon }) => {
                                 </li>
                             )) }
                         </ul>
+                        
                     </Col>
                 </Row>
                 <Row>
-                    <Col span={ 24 }></Col>
+                    <Col span={ 24 }>
+
+                    </Col>
                 </Row>
             </Modal>
         </div>

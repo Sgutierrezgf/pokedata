@@ -11,8 +11,8 @@ function App() {
   return (
     <BrowserRouter>
       <Layout>
-        <Row>
-          <Col span={ 18 } push={ 6 }>
+        <Row className='row'>
+          <Col className='col' span={ 18 } push={ 6 }>
             <Body />
           </Col>
           <Col span={ 6 } pull={ 18 }>
