@@ -1,7 +1,13 @@
 * {
   box-sizing: border-box;
+  
 }
-
+.row{
+  margin: 10px;
+}
+.col{
+  text-align: -webkit-center;
+}
 
 .grid-container {
   width: 70%;
@@ -9,6 +15,7 @@
   margin: 0 auto;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 10px;
+  
 }
 
 .btn {
